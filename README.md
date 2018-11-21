@@ -1,8 +1,6 @@
 # The League Oracle
  
 ## Setup
-If you have not already, please install:
-* [Node Version Manager (nvm)](https://github.com/creationix/nvm)
 * [Yarn](https://yarnpkg.com/en/docs/install)
 
 1. Run `yarn install`.
