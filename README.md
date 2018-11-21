@@ -1,44 +1,79 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# The League Oracle
+ 
+ 
+ [League of Legends Static Data API](https://developer.riotgames.com/static-data.html)
 
-## Available Scripts
+#### Champions API Call
+    
+    `http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/champion.json`
 
-In the project directory, you can run:
+##### Champions Response
 
-### `npm start`
+```
+{
+	"type": "champion",
+	"format": "standAloneComplex",
+	"version": "6.24.1",
+	"data": {
+		"Aatrox": {
+			"version": "6.24.1",
+			"id": "Aatrox",
+			"key": "266",
+			"name": "Aatrox",
+			"title": "the Darkin Blade",
+			"blurb": "Aatrox is a legendary warrior, one of only five that remain of an ancient race known as the Darkin. He wields his massive blade with grace and poise, slicing through legions in a style that is hypnotic to behold. With each foe felled, Aatrox's ...",
+			"info": {
+				"attack": 8,
+				"defense": 4,
+				"magic": 3,
+				"difficulty": 4
+			},
+			"image": {
+				"full": "Aatrox.png",
+				"sprite": "champion0.png",
+				"group": "champion",
+				"x": 0,
+				"y": 0,
+				"w": 48,
+				"h": 48
+			},
+			"tags": ["Fighter", "Tank"],
+			"partype": "BloodWell",
+			"stats": {
+				"hp": 537.8,
+				"hpperlevel": 85.0,
+				"mp": 105.6,
+				"mpperlevel": 45.0,
+				"movespeed": 345.0,
+				"armor": 24.384,
+				"armorperlevel": 3.8,
+				"spellblock": 32.1,
+				"spellblockperlevel": 1.25,
+				"attackrange": 150.0,
+				"hpregen": 6.59,
+				"hpregenperlevel": 0.5,
+				"mpregen": 0.0,
+				"mpregenperlevel": 0.0,
+				"crit": 0.0,
+				"critperlevel": 0.0,
+				"attackdamage": 60.376,
+				"attackdamageperlevel": 3.2,
+				"attackspeedoffset": -0.04,
+				"attackspeedperlevel": 3.0
+			}
+		},
+		...
+    }
+```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Version API Call
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Note, most of the API calls include a version (e.g.`6.24.1`). If you don't want to hardcode this, you must also use the versions API call:
 
-### `npm test`
+    `https://ddragon.leagueoflegends.com/api/versions.json`    
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Version Response
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+["8.23.1","8.22.1","8.21.1","8.20.1","8.19.1","8.18.2","8.18.1",...]
+```
