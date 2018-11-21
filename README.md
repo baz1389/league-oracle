@@ -1,13 +1,25 @@
 # The League Oracle
  
+## Setup
+If you have not already, please install:
+* [Node Version Manager (nvm)](https://github.com/creationix/nvm)
+* [Yarn](https://yarnpkg.com/en/docs/install)
+
+1. Run `yarn install`.
+2. Run `yarn start` and visit [locahost:3000](http://localhost:3000) to see
+your appplication.
+
+This application uses Yarn. **Do not use `npm install` commands**. Instead use the
+equivalent [Yarn commands](https://yarnpkg.com/en/docs/usage).
  
- [League of Legends Static Data API](https://developer.riotgames.com/static-data.html)
+ 
+### **[League of Legends Static Data API](https://developer.riotgames.com/static-data.html)**
 
 #### Champions API Call
     
-    `http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/champion.json`
-
-##### Champions Response
+    http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/champion.json
+    
+#### Champions Response
 
 ```
 {
@@ -68,11 +80,11 @@
 
 #### Version API Call
 
-Note, most of the API calls include a version (e.g.`6.24.1`). If you don't want to hardcode this, you must also use the versions API call:
+Note, most of the API calls include a version (e.g.`6.24.1`). If you don't want to hardcode this, you must also use the versions API call and pass it into the other API call URLs:
 
-    `https://ddragon.leagueoflegends.com/api/versions.json`    
+    https://ddragon.leagueoflegends.com/api/versions.json    
 
-##### Version Response
+#### Version Response
 
 ```
 ["8.23.1","8.22.1","8.21.1","8.20.1","8.19.1","8.18.2","8.18.1",...]
